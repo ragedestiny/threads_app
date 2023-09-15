@@ -1,34 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Threads - Clone
 
-## Getting Started
+> Inspired by Twitter, now X, and Threads, social media platforms became a must have communication tool to connect and reach out to a global audience. Using Next.js 13 and its powerful server/client rendering capabilities allows faster renders and seamlessly incorporates that technology into our components. Authentication is not a pain anymore with Clerk. Clerk handles social logins and username/password, along with webhooks that listen to real-time events and much much more.
 
-First, run the development server:
+> Live website [_here_](https://threads-app-flax.vercel.app/).
+>
+> Inspired by JavaScript Mastery [_here_](https://www.youtube.com/watch?v=O5cmLDVTgAs).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Project Status](#project-status)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## General Information
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- This Threads-Clone is a sleek social media app that loads quickly, looks fantastic, and keeps your data safe. It's made with Next.js for fast pages, MongoDB for smart data handling, and TailwindCSS for beautiful designs. Stay updated in real-time with webhooks, and trust Clerk for secure logins. With robust architecture and Zod for data validation, it's the smart choice for social networking. You can post threads and share your voice with others.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- nextjs - 13.4.19
+- tailwindcss - version 3.3.3
+- react - version 18.2.0
+- typescript - 5.2.2
+- @clerk/nextjs - 4.23.4
+- @radix-ui
+- @uploadthing/react - 5.5.0
+- zod - 3.22.2
+- mongoose - 7.5.0
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- User login and Authentication with Clerk
+- Create threads and communities
+- Search up users or communities
+- Display activity when others respond to threads
+- Threads, profiles, communities are saved with MongoDB
 
-## Deploy on Vercel
+## Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Home](./public/samplepages/home.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Mobile](./public/samplepages/mobile.png)
+
+## Setup
+
+`cd to correct folder`
+
+`npm install`
+
+`npm run dev`
+
+## Project Status
+
+Project is: _in progress_
+
+## Room for Improvement
+
+To do:
+
+- Implement Like feature on threads
+- Implement Repost feature on threads
+- Implement Share feature on threads
+- Add functionality for Replies and Tagged on profile page
