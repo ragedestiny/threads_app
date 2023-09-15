@@ -1,19 +1,16 @@
 "use client";
 
-import { sidebarLinks } from "@/constants";
-import {
-  OrganizationSwitcher,
-  SignOutButton,
-  SignedIn,
-  useAuth,
-} from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
 
-function LeftSidebar() {
+import { sidebarLinks } from "@/constants";
+
+const LeftSidebar = () => {
   const router = useRouter();
   const pathname = usePathname();
+
   const { userId } = useAuth();
 
   return (
@@ -25,12 +22,12 @@ function LeftSidebar() {
             pathname === link.route;
 
           if (link.route === "/profile") link.route = `${link.route}/${userId}`;
+
           return (
             <Link
               href={link.route}
               key={link.label}
-              className={`leftsidebar_link
-              ${isActive && "bg-primary-500"}`}
+              className={`leftsidebar_link ${isActive && "bg-primary-500 "}`}
             >
               <Image
                 src={link.imgURL}
@@ -38,6 +35,7 @@ function LeftSidebar() {
                 width={24}
                 height={24}
               />
+
               <p className="text-light-1 max-lg:hidden">{link.label}</p>
             </Link>
           );
@@ -54,6 +52,7 @@ function LeftSidebar() {
                 width={24}
                 height={24}
               />
+
               <p className="text-light-2 max-lg:hidden">Logout</p>
             </div>
           </SignOutButton>
@@ -61,6 +60,6 @@ function LeftSidebar() {
       </div>
     </section>
   );
-}
+};
 
 export default LeftSidebar;
